@@ -1,42 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .App {
-  text-align: center;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 60vmin;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.attribution {
+    color: white;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    text-decoration: none;
+    padding-left: 170px;
+    font-weight: bold;
+}
+
+.attribution:hover {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background: #614385;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #516395, #614385);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #516395, #614385);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Responsividade */
+@media screen and (max-width: 425px) {
+    .App-header h1 {
+        margin-top: 50px;
+        font-size: 1.5rem;
+    }
+
+    .attribution {
+        font-size: 0.5rem;
+        padding-left: 100px;
+    }
+
+    .App-logo {
+        height: 65vmin;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 375px) {
+    .App-header h1 {
+        font-size: 1rem;
+    }
+
+    .attribution {
+        font-size: 0.5rem;
+        padding-left: 70px;
+    }
+
+    .App-logo {
+        height: 60vmin;
+    }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+@media screen and (max-width: 320px) {
+    .App-header h1 {
+        font-size: 1rem;
+    }
+
+    .attribution {
+        font-size: 0.4rem;
+        padding-left: 50px;
+    }
+
+    .App-logo {
+        height: 60vmin;
+    }
 }
